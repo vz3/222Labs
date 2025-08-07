@@ -1,11 +1,159 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// src/pages/index.astro
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Building Tools for Transformation</title>
+  </head>
+  <body>
+    <main>
+      <div class="logo-container">
+        <img src="/logo.svg" alt="Company Logo" class="logo" />
+      </div>
+      
+      <div class="content">
+        <h2>Building tools for transformation</h2>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 16px; /* Base font size for rem calculations */
+  }
+
+  body {
+    background-color: #EEEEE;
+    font-family: Garamond, 'Times New Roman', serif;
+    color: #333333;
+    font-size: 1.375em; /* 22px equivalent */
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .logo-container {
+    margin-top: 30vh; /* 30% from top as requested */
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .content {
+    margin-top: 120px;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+  }
+
+  /* Mobile viewport (320px - 767px) */
+  @media screen and (max-width: 767px) {
+    .logo-container {
+      max-width: 90%;
+      margin-top: 25vh; /* Slightly less margin on mobile */
+    }
+    
+    .content {
+      margin-top: 80px; /* Less margin on mobile */
+      padding: 0 1rem;
+    }
+    
+    h2 {
+      font-size: 1.1em;
+    }
+    
+    h1 {
+      font-size: 1.4em;
+    }
+    
+    h3 {
+      font-size: 1.0em;
+    }
+    
+    h4 {
+      font-size: 0.95em;
+    }
+    
+    h5 {
+      font-size: 0.9em;
+    }
+    
+    h6 {
+      font-size: 0.85em;
+    }
+  }
+
+  /* Tablet viewport (768px - 1023px) */
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .logo-container {
+      max-width: 600px;
+    }
+    
+    h2 {
+      font-size: 1.4em;
+    }
+  }
+
+  /* Desktop viewport (1024px - 1439px) */
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .logo-container {
+      max-width: 700px;
+    }
+    
+    .content {
+      margin-top: 120px;
+    }
+    
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+
+  /* XL viewport (1440px and up) */
+  @media screen and (min-width: 1440px) {
+    .logo-container {
+      max-width: 800px;
+    }
+    
+    .content {
+      margin-top: 140px;
+    }
+    
+    h2 {
+      font-size: 1.6em;
+    }
+  }
+</style>
