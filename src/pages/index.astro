@@ -2,8 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 
 const title = "222Labs";
-const description = "Quietly building what's the future fitness.";
-const tagline = "Bodies evolve. Data reveals.";
+const description = "Quietly building the future of fitness.";
+const tagline = "Building the future of fitness.";
 ---
 
 <Layout {title} {description}>
@@ -21,6 +21,9 @@ const tagline = "Bodies evolve. Data reveals.";
         fetchpriority="high"
       />
       <p class="tagline">{tagline}</p>
+      <a href="#" onclick="location.href='mailto:' + 'hello' + '@' + '222labs' + '.' + 'co'; return false;" class="email-link">
+        <span>hello</span><span>@</span><span>222labs</span><span>.</span><span>co</span>
+      </a>
     </header>
 
     <section class="meta" aria-label="Company">
@@ -53,6 +56,21 @@ const tagline = "Bodies evolve. Data reveals.";
     color: #333333;
     letter-spacing: 0.02em;
     opacity: 0.85;
+  }
+
+  .email-link {
+    color: #333333;
+    text-decoration: none;
+    border-bottom: 1px dotted #333333;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: inline-block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .email-link:hover {
+    border-bottom: 1px solid #333333;
   }
 
   .meta {
