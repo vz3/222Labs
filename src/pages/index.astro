@@ -13,13 +13,22 @@
   <body>
     <main>
       <div class="logo-container">
-        <img src="/logo.svg" alt="211 Labs Logo" class="logo" />
+        <img src="/logo.svg" alt="222Labs" class="logo" />
       </div>
       
       <div class="content">
         <h2>Building tools for transformation</h2>
+        <div class="contact">
+          <a href="#" onclick="location.href='mailto:' + 'hello' + '@' + '222labs' + '.' + 'co'; return false;" class="email-link" id="email-display">
+            <span>hello</span><span>@</span><span>222labs</span><span>.</span><span>co</span>
+          </a>
+        </div>
       </div>
     </main>
+    
+    <footer>
+      <p>&copy;2025 222 Labs, LLC</p>
+    </footer>
   </body>
 </html>
 
@@ -77,6 +86,37 @@
     font-size: 1.5em;
     font-weight: normal;
     letter-spacing: 0.02em;
+  }
+
+  .contact {
+    margin-top: 1.5rem; /* ~24px */
+  }
+
+  .email-link {
+    color: #333333;
+    text-decoration: dashed underline;
+    text-underline-offset: 2px;
+    font-size: 1em; /* Body style/size */
+    transition: all 0.2s ease;
+  }
+
+  .email-link:hover {
+    text-decoration: solid underline;
+    text-underline-offset: 2px;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    padding: 1rem;
+    font-size: 0.6em;
+    color: #666;
+  }
+
+  footer p {
+    margin: 0;
   }
 
   /* Mobile viewport (320px - 767px) */
